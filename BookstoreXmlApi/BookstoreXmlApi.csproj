@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="BookstoreXmlApi.Tests\**\*.cs" />
+    <EmbeddedResource Remove="BookstoreXmlApi.Tests\**\*" />
+    <Content Remove="BookstoreXmlApi.Tests\**\*" />
+    <None Include="BookstoreXmlApi.Tests\**\*"
+          Exclude="BookstoreXmlApi.Tests\bin\**;BookstoreXmlApi.Tests\obj\**" />
+  </ItemGroup>
+</Project>

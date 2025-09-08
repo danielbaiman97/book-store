@@ -1,0 +1,31 @@
+<div class="toolbar">
+  <a mat-raised-button color="primary" routerLink="/books/new">
+    <mat-icon>add</mat-icon> Add Book
+  </a>
+  <span class="spacer"></span>
+  <button mat-stroked-button (click)="openHtmlReport()">HTML Report</button>
+  <button mat-stroked-button (click)="downloadCsv()">Export CSV</button>
+</div>
+
+<app-books-filters
+  [categories]="categories()"
+  [search]="search()"
+  [category]="category()"
+  (changed)="onFilters($event)">
+</app-books-filters>
+
+<app-books-table
+  [items]="items()"
+  [sortActive]="sortBy()"
+  [sortDirection]="order()"
+  (sortChange)="onSort($event)"
+  (delete)="onDelete($event)">
+</app-books-table>
+
+<mat-paginator
+  [length]="total()"
+  [pageIndex]="pageIndex()"
+  [pageSize]="pageSize()"
+  [pageSizeOptions]="[10,20,50,100]"
+  (page)="onPage($event)">
+</mat-paginator>

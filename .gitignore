@@ -1,0 +1,51 @@
+# ------------------------------
+# Global ignores
+# ------------------------------
+*.log
+*.tmp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# ------------------------------
+# VSCode / Visual Studio
+# ------------------------------
+.vscode/
+.vs/
+*.user
+*.suo
+
+# ------------------------------
+# Node / Angular (Bookstore-frontend)
+# ------------------------------
+Bookstore-frontend/node_modules/
+Bookstore-frontend/dist/
+Bookstore-frontend/.angular/
+Bookstore-frontend/coverage/
+Bookstore-frontend/npm-debug.log
+Bookstore-frontend/yarn-error.log
+Bookstore-frontend/package-lock.json
+
+# ------------------------------
+# .NET (BookstoreXmlApi)
+# ------------------------------
+BookstoreXmlApi/bin/
+BookstoreXmlApi/obj/
+BookstoreXmlApi/Debug/
+BookstoreXmlApi/Release/
+BookstoreXmlApi/*.exe
+BookstoreXmlApi/*.dll
+BookstoreXmlApi/*.pdb
+
+# ------------------------------
+# ASP.NET publish
+# ------------------------------
+BookstoreXmlApi/*.Publish.xml
+BookstoreXmlApi/*.pubxml
+BookstoreXmlApi/*.pubxml.user
+
+# ------------------------------
+# Environment
+# ------------------------------
+.env

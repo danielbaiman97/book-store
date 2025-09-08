@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bookstore>
+  <book category="children"><isbn>9051234567897</isbn><title lang="en">Harry Potter</title><author>J K. Rowling</author><year>2005</year><price>59.99</price></book>
+  <book category="web">
+    <isbn>9031234567897</isbn>
+    <title lang="en">XQuery Kick Start</title>
+    <author>James McGovern</author>
+    <author>Per Bothner</author>
+    <author>Kurt Cagle</author>
+    <author>James Linn</author>
+    <author>Vaidyanathan Nagarajan</author>
+    <year>2003</year>
+    <price>49.99</price>
+  </book>
+  <book category="web" cover="paperback">
+    <isbn>9043127323207</isbn>
+    <title lang="en">Learning XML</title>
+    <author>Erik T. Ray</author>
+    <year>2003</year>
+    <price>39.95</price>
+  </book>
+<book category="tttt" cover="dasdas"><isbn>9780306406157</isbn><title lang="en">rrr</title><author>ss</author><year>1500</year><price>4</price></book><book category="das" cover="dasd"><isbn>9783161484100</isbn><title lang="en">גדש</title><author>ww</author><year>1960</year><price>5</price></book><book category="das" cover="das"><isbn>9781861972712</isbn><title lang="en">rr</title><author>e</author><year>0</year><price>0</price></book><book category="ילדים"><isbn>9780131103627</isbn><title lang="en">ww</title><author>w</author><year>1451</year><price>1</price></book><book category="ילדים" cover="חח"><isbn>9780596007126</isbn><title lang="עברית">גשדג</title><author>יוסי</author><year>1980</year><price>20</price></book><book category="גדש" cover="גשד"><isbn>9780134757599</isbn><title lang="en">גדש</title><author>גשד</author><year>2015</year><price>5</price></book><book category="גשד" cover="גשד"><isbn>9781492051138</isbn><title lang="en">גדש</title><author>גשד</author><year>2007</year><price>80</price></book><book category="ילדים" cover="גשדג"><isbn>9781491950296</isbn><title lang="en">כגד</title><author>כגד</author><year>1500</year><price>1</price></book><book category="גשד"><isbn>9780000010056</isbn><title lang="en">גש</title><author>דד</author><author>אא</author><year>1650</year><price>80</price></book></bookstore>

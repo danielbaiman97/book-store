@@ -1,0 +1,2 @@
+.grid{display:flex;flex-direction:column;gap:16px}
+.row{display:flex;gap:16px;flex-wrap:wrap}

@@ -1,0 +1,70 @@
+<form [formGroup]="form" class="grid">
+  <div class="row">
+<mat-form-field appearance="outline">
+  <mat-label>ISBN (13 digits)</mat-label>
+  <input matInput formControlName="isbn" maxlength="13">
+  <mat-hint>Unique ID</mat-hint>
+
+  <mat-error *ngIf="form.controls.isbn.hasError('isbnTaken')">
+    This ISBN already exists
+  </mat-error>
+  <mat-error *ngIf="!form.controls.isbn.hasError('isbnTaken') && form.controls.isbn.invalid">
+    Invalid ISBN-13
+  </mat-error>
+
+  <mat-hint *ngIf="form.controls.isbn.pending">
+    Checking availability…
+  </mat-hint>
+</mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Title Language</mat-label>
+      <input matInput formControlName="titleLang" placeholder="en">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline">
+      <mat-label>Category</mat-label>
+      <input matInput formControlName="category">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Cover</mat-label>
+      <input matInput formControlName="cover" placeholder="paperback / hardcover">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Year</mat-label>
+      <input matInput type="number" formControlName="year">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Price</mat-label>
+      <input matInput type="number" formControlName="price" step="0.01">
+    </mat-form-field>
+  </div>
+
+  <div class="row" style="flex:1">
+    <div style="flex:1">
+      <h3>Authors</h3>
+      <div *ngFor="let ctrl of authors.controls; let i = index" class="row">
+        <mat-form-field appearance="outline" style="flex:1">
+          <mat-label>Author {{ i+1 }}</mat-label>
+          <input matInput [formControl]="ctrl">
+        </mat-form-field>
+        <button mat-icon-button color="warn" (click)="removeAuthor(i)" aria-label="Remove"><mat-icon>remove_circle</mat-icon></button>
+      </div>
+      <button mat-stroked-button (click)="addAuthor()" type="button"><mat-icon>add</mat-icon> Add Author</button>
+    </div>
+  </div>
+
+  <div class="toolbar" style="justify-content:flex-end">
+    <button mat-raised-button color="primary" (click)="submit()" [disabled]="form.invalid">Save</button>
+  </div>
+</form>

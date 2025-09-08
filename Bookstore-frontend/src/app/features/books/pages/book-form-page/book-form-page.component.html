@@ -1,0 +1,21 @@
+<div class="toolbar">
+  <a mat-button routerLink="/books"><mat-icon>arrow_back</mat-icon> Back</a>
+</div>
+
+<mat-card>
+  <ng-container *ngIf="!editMode; else editBlock">
+    <app-book-form [editMode]="false" (submitForm)="onSubmit($event)">
+    </app-book-form>
+  </ng-container>
+
+  <ng-template #editBlock>
+    <ng-container *ngIf="book$ | async as book">
+      <app-book-form
+        [editMode]="true"
+        [initial]="book"
+        (submitForm)="onSubmit($event)"
+      >
+      </app-book-form>
+    </ng-container>
+  </ng-template>
+</mat-card>
